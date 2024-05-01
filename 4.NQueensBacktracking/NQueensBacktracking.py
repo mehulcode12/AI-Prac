@@ -1,4 +1,4 @@
-# Python program to solve N Queen
+# Python program to solve N Queen 
 # Problem using backtracking
 
 global N
