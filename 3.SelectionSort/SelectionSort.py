@@ -1,12 +1,20 @@
-def selection_sort(arr):
-    n = len(arr)
-    for i in range(n):
-        min_idx = i
-        for j in range(i+1, n):
-            if arr[j] < arr[min_idx]:
-                min_idx = j
-    arr[i], arr[min_idx] = arr[min_idx], arr[i]
-# Test the function
-arr = [64, 25, 12, 22, 11]
-selection_sort(arr)
-print("Sorted array:", arr)
+# Selection sort in Python
+# time complexity O(n*n)
+# sorting by finding min_index
+def selectionSort(array, size):
+    for ind in range(size):
+        min_index = ind
+
+        for j in range(ind + 1, size):
+            # select the minimum element in every iteration
+            if array[j] < array[min_index]:
+                min_index = j
+        # swapping the elements to sort the array
+        (array[ind], array[min_index]) = (array[min_index], array[ind])
+
+
+arr = [-2, 45, 0, 11, -9, 88, -97, -202, 747]
+size = len(arr)
+selectionSort(arr, size)
+print('The array after sorting in Ascending Order by selection sort is:')
+print(arr)
